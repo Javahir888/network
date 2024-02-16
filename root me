@@ -1,0 +1,20 @@
+ how many ports are open - nmap -sV ip
+```
+Let’s open GoBuster!
+gobuster dir -u 10.10.121.221 -w WORDLIST_PATH
+Wordlist path can be found in /root/Desktop/Tools/wordlists/dirbuster
+
+Command that you need to run will be gobuster dir -u <ip_addr> -w /root/Dekstop/Tools/wordlists/dirbuster/directory-list-2.3-medium.txt
+```
+Nmap Scan :
+nmap -sC -sV -oN nmap/rootme <MACHINE_IP>
+
+-sC : Default scripts
+-sV : Version detection
+-oN : Output to be stored in the directory ‘nmap’ you created earlier
+```
+gobuster dir -u http://<MACHINE_IP> -w <PATH_TO_WORDLIST>
+
+-u : URL
+-w : Wordlist
+```
